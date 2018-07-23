@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, ToastController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
-
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,8 +21,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Clinical', component: 'tabs' },
-      { title: 'Department', component: 'department' }
-
+      { title: 'Department', component: 'department' },
+      { title: 'About', component: AboutPage},
     ];
 
   }
@@ -40,7 +40,7 @@ export class MyApp {
         let toast = this.toastCtrl.create({
           message: 'Install this webapp on your iPhone: Tap the share icon below and then select "Add to Home Screen"',
           position: 'bottom',
-          duration: 10000,
+          duration: 50000,
           showCloseButton: true
         });
         toast.present();
